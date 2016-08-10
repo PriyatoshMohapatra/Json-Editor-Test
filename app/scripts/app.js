@@ -2,7 +2,7 @@
 
 /**
  * @ngdoc overview
- * @name clmMasterApp
+ * @name ClmMasterApp
  * @description
  * # clmMasterApp
  *

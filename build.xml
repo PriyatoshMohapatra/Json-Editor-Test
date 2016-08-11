@@ -1,6 +1,7 @@
 <project name="Json-Editor" default="init">
 <property environment="env"/>
 
+<!-- Display Env  -->
 <target name="run">
     <echo message="Jenkins workspace: ${env.WORKSPACE}"/>
     <echo message="Job directory: ${env.WORKSPACE}../../jobs/${env.JOB_NAME}"/>
@@ -10,8 +11,10 @@
     <echo message="JENKINS_URL data: ${env.WORKSPACE}../../jobs/${env.JOB_NAME}/build/${env.JENKINS_URL}"/>
     <echo message="GIT COMMIT data: ${env.WORKSPACE}../../jobs/${env.JOB_NAME}/build/${env.GIT_COMMIT}"/>
 </target>
+
+<!-- Copy Files -->
 <target name="init" depends="run">
-<copy todir="${env.WORKSPACE}/${env.JOB_NAME} Build/dist/${env.BUILD_NUMBER}">
+<copy todir="${env.WORKSPACE}/${env.JOB_NAME} Build/dist/BUILD NUMBER ${env.BUILD_NUMBER}">
   <fileset dir="${env.WORKSPACE}">
     <include name="**/*"/>
   </fileset>

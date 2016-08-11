@@ -1,16 +1,16 @@
-<project name="Json-Editor" default="run">
-
-<!--     <target name="run">
-       <echo> Hello Jenkins </echo>
-    </target>
-    <copy todir="${destDir}" overwrite="false">
-      <fileset dir="http://192.168.1.101:8080/job/Json-Editor/ws/app/" excludes="**/*.java" />
-    </copy> -->
+<project name="Json-Editor" default="init">
 <property environment="env"/>
 
 <target name="run">
     <echo message="Jenkins workspace: ${env.WORKSPACE}"/>
     <echo message="Job directory: ${env.WORKSPACE}../../jobs/${env.JOB_NAME}"/>
     <echo message="Build data: ${env.WORKSPACE}../../jobs/${env.JOB_NAME}/build/${env.BUILD_ID}"/>
+</target>
+<target name="init" depends="run">
+<copy todir="${env.WORKSPACE}/${env.JOB_NAME}/build/${env.BUILD_ID}">
+  <fileset dir="${env.WORKSPACE}">
+    <include name="**/*"/>
+  </fileset>
+</copy>
 </target>
 </project>

@@ -14,7 +14,7 @@
 
 <!-- Copy Files -->
 <target name="init" depends="run">
-<copy todir="${env.WORKSPACE}/${env.JOB_NAME} Build/dist/BUILD NUMBER ${env.BUILD_NUMBER}">
+<copy todir="${env.WORKSPACE}/${env.JOB_NAME}-Build/dist/BUILD-NUMBER-${env.BUILD_NUMBER}">
   <fileset dir="${env.WORKSPACE}">
     <include name="**/*"/>
   </fileset>

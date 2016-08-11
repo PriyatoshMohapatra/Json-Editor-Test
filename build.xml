@@ -1,7 +1,13 @@
-<project name="Json-Editor" default="info">
+<project name="Json-Editor" default="info" srcDir="/app/" destDir="/builds/">
 
     <target name="info">
        <echo> Hello Jenkins </echo>
     </target>
+    <touch>
+     <fileset dir="${destDir}"/>
+   </touch>
+    <copy todir="${destDir}" overwrite="false">
+      <fileset dir="${srcDir}" excludes="**/*.java" />
+    </copy>
 
 </project>

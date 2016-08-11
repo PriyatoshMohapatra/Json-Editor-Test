@@ -11,7 +11,7 @@
     <echo message="GIT COMMIT data: ${env.WORKSPACE}../../jobs/${env.JOB_NAME}/build/${env.GIT_COMMIT}"/>
 </target>
 <target name="init" depends="run">
-<copy todir="${env.WORKSPACE}/${env.JOB_NAME}/build/${env.BUILD_ID}">
+<copy todir="${env.WORKSPACE}/${env.JOB_NAME} Build/dist/${env.BUILD_NUMBER}">
   <fileset dir="${env.WORKSPACE}">
     <include name="**/*"/>
   </fileset>

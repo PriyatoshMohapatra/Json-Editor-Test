@@ -1,0 +1,7 @@
+<project>
+
+    <target name="info">
+       <echo> HEllo </echo>
+    </target>
+
+</project>

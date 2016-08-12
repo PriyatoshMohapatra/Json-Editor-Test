@@ -2,7 +2,7 @@
 <property environment="env"/>
 
 <!-- Display Env  -->
-<target name="run">
+<target name="init">
     <echo message="Jenkins workspace: ${env.WORKSPACE}"/>
     <echo message="Job directory: ${env.WORKSPACE}../../jobs/${env.JOB_NAME}"/>
     <echo message="Build data: ${env.WORKSPACE}../../jobs/${env.JOB_NAME}/build/${env.BUILD_ID}"/>
@@ -13,11 +13,11 @@
 </target>
 
 <!-- Copy Files -->
-<target name="init" depends="run">
+<!-- <target name="init" depends="run">
 <copy todir="${env.WORKSPACE}/${env.JOB_NAME}-Build/dist/BUILD-NUMBER-${env.BUILD_NUMBER}">
   <fileset dir="${env.WORKSPACE}">
     <include name="**/*"/>
   </fileset>
-</copy>
+</copy> -->
 </target>
 </project>

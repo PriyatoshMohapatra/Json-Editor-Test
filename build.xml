@@ -20,4 +20,9 @@
   </fileset>
 </copy> 
 </target>-->
+ <target name="grunt" depends="init">
+    <exec executable="grunt" dir="${env.WORKSPACE}">
+      <arg value="build"/>
+    </exec>
+  </target>
 </project>

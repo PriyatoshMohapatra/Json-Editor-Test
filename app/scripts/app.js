@@ -25,7 +25,7 @@ angular
         controller: 'MainCtrl'
       })
       .otherwise({
-        templateUrl: 'views/404.html',
+        templateUrl: 'views/404.html' ,
         controller: 'ErrorCtrl'
       });
   });

@@ -7,7 +7,7 @@
  * # clmMasterApp
  *
  * Main module of the application.
- */ test
+ */ test 2nd
 angular
   .module('clmMasterApp', [
     'ngAnimate',
